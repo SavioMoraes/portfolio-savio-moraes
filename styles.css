@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-white: #fff;
+  --color-pink: #d12f7a;
+  --color-black: #000;
+  --color-blue: #073fcc;
+  --color-purple: #5f01ac;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+#person {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: var(--color-black);
+}
+
+.person-content {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-black);
+}
+
+.person-content div h1 {
+  padding: 0px 4px;
+  font-size: 4.5rem;
+  font-weight: 300;
+  color: transparent;
+  animation: written_text 5s ease forwards;
+}
+
+.person-content div h2 {
+  padding: 0px 4px;
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: transparent;
+  background: var(--color-black);
+  animation: written_text 5s ease forwards;
+}
+
+.person-content div h1:nth-child(1) {
+  animation-delay: 1s;
+}
+
+.person-content div h1:nth-child(2) {
+  animation-delay: 2s;
+}
+
+.person-content div h2:nth-child(3) {
+  animation-delay: 3s;
+}
+
+@keyframes written_text {
+  100% {
+    color: var(--color-white);
+  }
+}
+
+.techs {
+  margin-top: 200px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px
+}
+
+.techs-icons {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+}
+
+.techs-icons:hover {
+  transform: scale(1.1);
+}
+
+.person-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.person-image img {
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  border: 2px solid var(--color-white);
+}
+
+.person-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+}
+
+.list-icons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.icons {
+  width: 35px;
+  height: 35px;
+}
+
+.icons:hover {
+  transform: scale(1.1);
+}
+
+/* Final da p[agina Home (index) */
