@@ -1,79 +1,375 @@
+
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
   <link rel="stylesheet" href="styles.css">
-  <title>Portfólio Sávio Moraes</title>
+  <title>Portfólio | Sávio Moraes</title>
 </head>
+
 <body>
-  <main>
-    <!-- Person -->
-    <section id="person">
-      <div class="person-content">
-        <div class="person-name">
-          <h1>Olá,</h1>
-          <h1>sou o <span>Sávio Moraes</span></h1>
-          <h2>Desenvolvedor Fullstack</h2>
-        </div>
+  <!-- Header -->
+  <section id="header">
+    <a class="header-title" href="/">
+      <h1>
+        Sávio Moraes
+      </h1>
+    </a>
 
-        <div class="stacks-content">
-          <div class="stacks">
-            <ul class="techs">
-              <li>
-                <img src="./svg/js.svg" alt="javascript-icon" class="techs-icons">
-              </li>
-              <li>
-                <img src="./svg/typescript.svg" alt="typescript-icon" class="techs-icons">
-              </li>
-               <li>
-                <img src="./svg/react.svg" alt="react-logo"class="techs-icons" >
-              </li>
-              <li>
-                <img src="./svg/node.svg" alt="node-js-icon" class="techs-icons">               
-              </li>
-              <li>
-                <img src="./svg/python-5.svg" alt="python-icon" class="techs-icons">
-              </li>
-              <li>
-                <img src="./svg/mysql-2.svg" alt="mysql-icon" class="techs-icons">
-              </li> 
-              <li>
-                <img src="./svg/mongodb-icon-1.svg" alt="mongodb-icon" class="techs-icons">
-              </li>
-              <li>
-                <img src="./svg/html.svg" alt="html-icon" class="techs-icons">
-              </li>
-              <li>
-                <img src="./svg/css.svg" alt="css-icon" class="techs-icons">
-              </li>
-            </ul>
+
+    <nav class="navbar">
+      <button class="menu-hamburguer"></button>
+
+      <ul class="navbar-links">
+        <li><a href="#person">Home</a></li>
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#projects">Projetos</a></li>
+        <li><a href="#contacts">Contatos</a></li>
+      </ul>
+    </nav>
+
+  </section>
+  <!-- End Header -->
+
+  <!-- Person -->
+  <section id="person">
+    <div class="person-content">
+      <div class="person-name">
+        <h1>Olá, <span></span></h1>
+        <h1>Meu nome é <span></span></h1>
+        <h1>Sávio Moraes<span></span></h1>
+        <h1>Desenvolvedor Fullstack<span></span></h1>
+      </div>
+
+      <div class="stacks-content">
+
+        <ul class="stacks">
+          <li>
+            <div data="HTML">
+              <img src="./svg/html.svg" alt="html-icon">
+            </div>
+          </li>
+
+          <li>
+            <div data="CSS">
+              <img src="./svg/css.svg" alt="css-icon">
+            </div>
+          </li>
+
+          <li>
+            <div data="JS">
+              <img src="./svg/js.svg" alt="js-icon">
+            </div>
+          </li>
+
+          <li>
+            <div data="TS">
+              <img src="./svg/typescript.svg" alt="ts-icon">
+            </div>
+          </li>
+
+          <li>
+            <div data="REACT">
+              <img src="./svg/react.svg" alt="react-icon">
+            </div>
+          </li>
+
+          <li>
+            <div data="NODE">
+              <img src="./svg/node.svg" alt="node-icon">
+            </div>
+          </li>
+
+          <li>
+            <div data="PYTHON">
+              <img src="./svg/python-5.svg" alt="python-icon">
+            </div>
+          </li>
+
+          <li>
+            <div data="MYSQL">
+              <img src="./svg/mysql-2.svg" alt="mysql-icon">
+            </div>
+          </li>
+
+          <li>
+            <div data="MONGODB">
+              <img src="./svg/mongodb-icon-1.svg" alt="mongodb-icon">
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="person-background">
+      <div class="wrapper-profile-photo">
+        <img class="profile-photo" src="./images/savio moreira de moraes_engenheiro de software_desenvolvedor web full stack_desenvolvedor front end_desenvolvedor back end_javascript_typescrit_react_nodejs_python.png" alt="foto-sávio-moraes">
+      </div>
+
+      <div class="links">
+        <a href="https://github.com/SavioMoraes" target="_blank">
+          <img src="./svg/logo-github.svg" alt="icon-github">
+        </a>
+        <a href="https://www.linkedin.com/in/saviomoreirademoraes/" target="_blank">
+          <img src="./svg/logo-linkedin.svg" alt="icon-linkin">
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- End Person -->
+
+  <!-- About -->
+  <section id="about">
+    <div class="background-about">
+      <div class="img-wrapper">
+        <img src="./images/img.2.jpg" alt="notebook apple">
+      </div>
+    </div>
+
+    <div class="box-about">
+      <div class="section-subtitle">
+        <h2>
+          <p>💻</p>
+          <p><span>Desenvolvedor</span> Fullstack</p>
+        </h2>
+      </div>
+
+      <h3>
+        Sou um Desenvolvedor Fullstack com experiência em
+        <p>JavaScript, TypeScript, React, Node.js Python, MySQL, MongoDB, HTML e CSS</p>
+      </h3>
+
+      <h4>
+        Meu nome é Sávio Moraes, tenho 43 anos, sou formado em Gestão da Tecnologia da Informação e com certificado em Desenvolvimento Web Fullstack, tenho mais de 2 anos de experiência em desenvolvimento web, com foco em desenvolvimento de aplicações web.
+      </h4>
+
+      <h4>
+        Abaixo está o meu <p>currículo</p> para download.
+      </h4>
+
+      <div class="button-cta">
+        <a href="public/document/curriculo_savio_moraes_desenvolvedor_full_stack.pdf" download="CV-Sávio-Moraes" aria-label="Baixar curriculo do Desenvolvedor Sávio Moraes">
+          Currículo
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- End about -->
+
+  <!-- Projects -->
+  <section id="projects">
+    <div class="projects-title">
+      <h2>PROJETOS 🧩</h2>
+    </div>
+
+    <div class="container-projects">
+      <div class="swiper mySwiper">
+        <!-- wrapper-projects -->
+
+        <div class="swiper-wrapper">
+
+          <!-- content-project -->
+          <!-- início card -->
+          <div class="swiper-slide card-project">
+            <div class="image-project">
+              <a href="https://project-react-movies-libs.vercel.app/">
+                <img src="./images/project-react-movies-libs.png" alt="Página inicial do React Movies Libs">
+              </a>
+            </div>
+
+            <span>React Movies Libs</span>
+
+            <p>Esse projeto é uma lista de filmes em React, utilizando API externa</p>
+
+            <div class="cta-project">
+              <a href="https://github.com/SavioMoraes/project-react-movies-libs" target="_blank">
+                Código
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://project-react-movies-libs.vercel.app/" target="_blank">
+                Site
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
           </div>
+          <!-- fim card -->
+          <!-- início card -->
+          <div class="swiper-slide card-project">
+            <div class="image-project">
+              <a href="https://project-movie-card-library-crud-flame.vercel.app/">
+                <img src="./images/movie-card-library-crud.png" alt="Página inicial do Movie Card Library CRUD">
+              </a>
+            </div>
+
+            <span>Movie Card Library CRUD</span>
+
+            <p>Esse projeto, simula uma lista de filmes em React, realizando um CRUD</p>
+
+            <div class="cta-project">
+              <a href="https://github.com/SavioMoraes/project-movie-card-library-crud">
+                Código
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://project-movie-card-library-crud-flame.vercel.app/">
+                Site
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+          <!-- fim card -->
+          <!-- início card -->
+          <div class="swiper-slide card-project">
+            <div class="image-project">
+              <a href="https://saviomoraes.github.io/project-to-do-list/">
+                <img src="./images/to-do-list.png" alt="Página inicial do projeto To-Do-List">
+              </a>
+            </div>
+
+            <span>To Do List</span>
+
+            <p>Esse projeto, simula uma lista de tarefas em JavaScript</p>
+
+            <div class="cta-project">
+              <a href="https://github.com/SavioMoraes/project-to-do-list">
+                Código
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://saviomoraes.github.io/project-to-do-list/">
+                Site
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+          <!-- fim card -->
+          <!-- início card -->
+          <div class="swiper-slide card-project">
+            <div class="image-project">
+              <a href="https://saviomoraes.github.io/project-pixels-art/">
+                <img src="./images/pixels-art.png" alt="Página inicial do projeto Pixels Art">
+              </a>
+            </div>
+
+            <span>Pixels Art</span>
+
+            <p>Que tal fazer belos desenhos nesse quadro de pixels?</p>
+
+            <div class="cta-project">
+              <a href="https://github.com/SavioMoraes/project-pixels-art">
+                Código
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://saviomoraes.github.io/project-pixels-art/">
+                Site
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+          <!-- fim card -->
+          <!-- início card -->
+          <div class="swiper-slide card-project">
+            <div class="image-project">
+              <a href="https://saviomoraes.github.io/project-shopping-cart/">
+                <img src="./images/shopping-cart.png" alt="Página inicial do projeto Shopping Cart">
+              </a>
+            </div>
+
+            <span>Shopping Cart</span>
+
+            <p>Esse projeto, simula uma loja em JavaScript com a API do mercado libre</p>
+
+            <div class="cta-project">
+              <a href="https://github.com/SavioMoraes/project-shopping-cart">
+                Código
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://saviomoraes.github.io/project-shopping-cart/">
+                Site
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+          <!-- fim card -->
+
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+
+
+
+      </div>
+    </div>
+
+
+  </section>
+  <!-- End Projects -->
+  <!-- Contacts -->
+  <section id="contacts">
+    <div class="contact-icon-content">
+      <h2>Contato 📞</h2>
+    </div>
+
+    <div class="contact-icons-wrapper">
+      <div class="contact-icon-content">
+        <a href="https://wa.me/+5547999323225" target="_blank">
+          <div class="contact-icon">
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+        </a>
+        <div class="contact-info">
+          <a href="https://wa.me/+5547999323225" target="_blank">
+            <span>Telefone | WhatsApp</span>
+          </a>
+          <a href="https://wa.me/+5547999323225" target="_blank">
+            <p>+55 (47) 99932-3225</p>
+          </a>
         </div>
       </div>
 
-      <div class="person-background">
-        <div class="person-image">
-          <img src="./images/savio moreira de moraes_engenheiro de software_desenvolvedor web full stack_desenvolvedor front end_desenvolvedor back end_javascript_typescrit_react_nodejs_python.png" alt="Sávio Moraes">
-        </div>
-        <div class="person-icons">
-          <ul class="list-icons">
-            <li>
-              <a href="https://www.linkedin.com/in/saviomoreirademoraes/" target="_blank">
-                <img src="./svg/logo-linkedin.svg" alt="linkedin-icon" class="icons">
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/SavioMoraes" target="_blank">
-                <img src="./svg/logo-github.svg" alt="github-icon" class="icons">
-              </a>
-            </li>
-
-          </ul>
+      <div class="contact-icon-content">
+        <a href="https://www.linkedin.com/in/saviomoreirademoraes/" target="_blank">
+          <div class="contact-icon">
+            <i class="fa-brands fa-linkedin"></i>
+          </div>
+        </a>
+        <div class="contact-info">
+          <a href="https://www.linkedin.com/in/saviomoreirademoraes/" target="_blank">
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://www.linkedin.com/in/saviomoreirademoraes/" target="_blank">
+            https://www.linkedin.com/in/saviomoreirademoraes/
+          </a>
         </div>
       </div>
-    </section>
-    <!-- End Person-->
-  </main>
+    </div>
+  </section>
+  <!-- End Contacts -->
+
+  <!-- Footer -->
+  <section id="footer">
+    <div class="container-footer">
+      <h2>Feito com ❤️ por</h2>
+      <h3>Sávio Moraes © 2024</h3>
+    </div>
+  </section>
+  <!-- End Footer -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <script src="scripts.js"></script>
+
 </body>
+
 </html>
