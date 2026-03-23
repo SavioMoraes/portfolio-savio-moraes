@@ -26,18 +26,38 @@ body {
 
 #header {
   display: flex;
+  justify-content: center;
+  width: 100%;
+  position: fixed;
+  background: transparent;
+  transition: all .3s ease-out;
+  z-index: 2;
+}
+
+/* ============================= */
+/* CONTAINER NAVBAR */
+/* ============================= */
+.container-navbar {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 15px 0;
+  display: flex;
   justify-content: space-between;
   align-items: center;
+}
 
-  width: 100%;
+/* telas maiores */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1300px;
+  }
+}
 
-  padding: 15px 30px;
-  position: fixed;
-
-  background: 'transparent';
-  transition: all .3s ease-out;
-
-  z-index: 2;
+@media (min-width: 1840px) {
+  .container {
+    max-width: 1400px;
+  }
 }
 
 .header-title {
@@ -62,9 +82,9 @@ body {
 
 .navbar-links {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
-
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
   width: 100%;
 }
 
@@ -160,8 +180,6 @@ body {
     transition: all .2s ease-in-out;
     transform: rotate(45deg) translate(-7px, -5px);
   }
-
-
 }
 
 
@@ -183,47 +201,66 @@ body {
   }
 }
 
+/* ============================= */
+/* CONTAINER MAIN */
+/* ============================= */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
 
+/* telas maiores */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1300px;
+  }
+}
 
-
-
-
-
-
+@media (min-width: 1840px) {
+  .container {
+    max-width: 1400px;
+  }
+}
 
 #person {
   height: 100vh;
   width: 100%;
-
   display: flex;
   align-items: center;
-
   background: var(--color-black);
+}
+
+.container #person {
+  display: flex;
 }
 
 .person-content {
   height: 100%;
   width: 50%;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   flex-direction: column;
-
   background: var(--color-black);
 }
 
-.person-content div h1 {
-  padding: 0px 4px;
-  color: transparent;
+.person-wrapper {
+  width: 100%;
+  max-width: 500px;
+  transform: translate(80px);
+}
 
+.person-content div h1 {
+  padding: 0;
+  color: transparent;
   position: relative;
   width: fit-content;
-
   font-size: calc(2vw + 1.5rem);
   line-height: calc(3vw + 1.8rem);
-
   animation: written_text .5s ease forwards;
 }
 
@@ -243,17 +280,16 @@ body {
 .person-content div h1:nth-child(4) {
   animation-delay: 4s;
   font-size: 2rem;
+  margin-bottom: 10px;
 }
 
 .person-content div h1 span {
   position: absolute;
   top: 0;
   left: 0;
-
   width: 0px;
   height: 100%;
   background: var(--color-pink);
-
   animation: written_text_box 1s ease;
   animation-delay: .5s;
 }
@@ -274,53 +310,50 @@ body {
   animation-delay: 3.5s;
 }
 
-
 .person-name {
-  margin-top: 11rem;
-  padding: 0px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 40px 0;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 100px;
 }
 
 .stacks-content {
   display: flex;
-  justify-content: center;
-
-  margin: 5rem 0rem 2rem;
   flex-direction: column;
-
-  padding: 0px 20px;
+  align-items: flex-start;
+  margin: 20px 0;
 }
 
 .stacks-content h3 {
   color: var(--color-white);
   font-size: calc(.85vw + .5rem);
-
-  margin-left: 20px;
+  margin-left: 30px;
 }
 
 .stacks {
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  flex-direction: row;
+  padding: 12px 0;
+  gap: 20px;
 }
 
 .stacks li {
   display: flex;
   align-items: center;
-
   position: relative;
-
-  margin: 10px;
-  padding: 10px;
-
   list-style: none;
+  margin-right: 5px;
 }
-
 
 .stacks li img {
   width: calc(2.5vw + 0.5rem);
   height: auto;
-
   transition: transform .3s ease;
 }
 
@@ -334,10 +367,8 @@ body {
   position: absolute;
   top: calc(5vw + 1rem);
   left: calc(1vw + 0.5rem);
-
   width: 20px;
   height: 20px;
-
   color: var(--color-white);
   font-size: 1.25vh;
 }
@@ -803,16 +834,12 @@ body {
 .image-project {
   max-height: 240px;
   max-width: 250px;
-
   height: 100%;
   width: 100%;
-
   position: relative;
   overflow: hidden;
   border-radius: 30px;
-
   border: 4px solid var(--color-purple);
-
   margin: 0 auto;
 }
 
@@ -824,9 +851,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-
   border: 2px solid var(--color-white);
-
   transition: transform .3s ease-out;
   cursor: pointer;
 }
@@ -839,7 +864,6 @@ body {
   color: var(--color-black);
   font-weight: bold;
   font-size: 1.7rem;
-
   margin: .75rem auto .5rem auto;
 }
 
