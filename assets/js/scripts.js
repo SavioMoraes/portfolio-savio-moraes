@@ -21,18 +21,11 @@ function createSwiper(container, pagination, nextButton, prevButton) {
 }
 
 function handleWidth() {
-  let getWidth = window.innerWidth || document.documentElement.clientWidth;
-  let slideShow = 3;
+  let getWidth = window.innerWidth;
 
-  if (getWidth < 1001) {
-    slideShow = 2;
-  }
-
-  if (getWidth < 700) {
-    slideShow = 1;
-  }
-
-  return slideShow
+  if (getWidth <= 480) return 1;
+  if (getWidth <= 768) return 2;
+  return 3;
 }
 
 menuHamburguer.addEventListener('click', () => {

@@ -388,34 +388,6 @@ body {
   }
 }
 
-
-/* sm -> md */
-@media (min-width: 377px) and (max-width: 768px) {
-  .person-name {
-    padding: 0px 10px;
-  }
-
-  .stack-content {
-    padding: 0px 15px;
-  }
-
-  .stacks-content h3 {
-    margin-left: 10px;
-  }
-
-  .stacks {
-    margin-top: 10px;
-  }
-
-  .stacks li {
-    margin: 0px;
-  }
-
-  .stacks li img {
-    width: calc(3.2vw + 0.5rem);
-  }
-}
-
 @media (max-width: 1000px) and (orientation: landscape) {
   .stacks li div:hover::after {
     font-size: 1.3vw;
@@ -648,44 +620,6 @@ body {
   filter: brightness(.8);
 }
 
-/* sm */
-@media (max-width: 375px) {
-  .box-about {
-    padding: 1rem
-  }
-
-  .section-subtitle p {
-    font-size: 2rem;
-  }
-
-  .box-about h3 {
-    margin: 2rem 1rem;
-  }
-
-  .box-about h4 {
-    margin: 1rem;
-  }
-
-}
-
-@media (min-width: 376px) and (max-width: 768px) {
-  .box-about {
-    padding: 1.3rem;
-  }
-
-  .section-subtitle p {
-    font-size: 2rem;
-  }
-
-  .box-about h3 {
-    margin: 1.5rem 1rem;
-  }
-
-  .box-about h4 {
-    margin: 1.5rem;
-  }
-}
-
 @media (min-width: 768px) and (max-width: 1440px) {
   .box-about {
     padding: 1.8rem;
@@ -832,16 +766,6 @@ body {
 
 .cta-project a:hover {
   opacity: .7;
-}
-
-@media (max-width: 375px) {
-  .swiper-slide span {
-    font-size: 1.5rem;
-  }
-
-  .swiper-slide p {
-    font-size: 1rem;
-  }
 }
 
 @media (max-width: 1000px) {
@@ -1071,5 +995,144 @@ body {
   100% {
     width: 0;
     left: 100%;
+  }
+}
+
+/* ============================= */
+/* MOBILE PADRÃO (375px - 480px) */
+/* ============================= */
+@media (max-width: 480px) {
+
+  /* ===== HEADER ===== */
+  .container-navbar {
+    padding: 10px;
+  }
+
+  .header-title h1 {
+    font-size: 1.6rem;
+  }
+
+  /* ===== NAVBAR ===== */
+  .navbar {
+    justify-content: flex-end;
+  }
+
+  .navbar-links {
+    width: 70%; /* 🔥 ajuste melhor pro mobile */
+  }
+
+  /* ===== MAIN ===== */
+  .container {
+    padding-top: 80px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* ===== PERSON ===== */
+  #person {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .person-content {
+    width: 100%;
+    padding: 20px 0;
+    align-items: flex-start;
+  }
+
+  .person-wrapper {
+    max-width: 100%;
+  }
+
+  .person-name {
+    margin-bottom: 40px;
+  }
+
+  .person-content div h1 {
+    font-size: 2rem;
+    line-height: 2.6rem;
+  }
+
+  .person-background {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    padding: 20px 0;
+  }
+
+  .profile-photo {
+    max-width: 200px;
+  }
+
+  /* ===== STACKS ===== */
+  .stacks {
+    gap: 10px;
+  }
+
+  .stacks li img {
+    width: 28px;
+  }
+
+  /* ===== ABOUT ===== */
+  #about {
+    flex-direction: column;
+  }
+
+  .background-about {
+    width: 100%;
+    height: 200px;
+  }
+
+  .box-about {
+    width: 100%;
+    padding: 20px;
+    margin: 20px 0;
+  }
+
+  .box-about h3,
+  .box-about h4 {
+    margin: 10px 0;
+  }
+
+  /* ===== PROJECTS ===== */
+  .projects-title h2 {
+    font-size: 2.2rem;
+  }
+
+  .swiper {
+    height: auto;
+    max-width: 100%;
+  }
+
+  .card-project {
+    padding: 20px;
+  }
+
+  .image-project {
+    max-width: 100%;
+    height: 180px;
+  }
+
+  /* ===== CONTACT ===== */
+  .contact-icons-wrapper {
+    flex-direction: column;
+    margin-left: 0;
+  }
+
+  .contact-icon-content {
+    width: 100%;
+  }
+
+  .contact-content h2 {
+    font-size: 2.4rem;
+  }
+
+  /* ===== FOOTER ===== */
+  .container-footer h2 {
+    font-size: 1.6rem;
+  }
+
+  .container-footer h3 {
+    font-size: 1.2rem;
   }
 }
