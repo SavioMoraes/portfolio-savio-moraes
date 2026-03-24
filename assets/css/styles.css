@@ -114,31 +114,25 @@ body {
   .navbar-links {
     display: flex;
     flex-direction: column;
-
     width: 50%;
     height: 100vh;
-
     position: fixed;
     right: 0;
     top: 0;
     background: #333;
     clip-path: circle(100px at 90% -20%);
-
     pointer-events: none;
     transition: .6s ease-out;
   }
 
   .menu-hamburguer {
     display: block;
-
     padding: 0;
     margin-bottom: .4rem;
     border: none;
     border-top: 3px solid var(--color-white);
-
     background: transparent;
     transition: all .3s ease-in-out;
-
     z-index: 1;
   }
 
@@ -153,15 +147,12 @@ body {
     display: block;
     width: 25px;
     height: 3px;
-
     margin-top: .6rem;
-
     background: var(--color-white);
   }
 
 
   /* ATIVO */
-
   .navbar.active .navbar-links {
     clip-path: circle(1400px at 90% -18%);
     pointer-events: all;
@@ -211,7 +202,6 @@ body {
   padding-top: 50px;
   padding-left: 10px;
   padding-right: 10px;
-  border: 2px solid red;
 }
 
 /* telas maiores */
@@ -443,18 +433,14 @@ body {
 .person-background {
   height: 100vh;
   width: 50%;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   position: relative;
   flex-direction: column;
-
-  background-image: url(./img/img1.jpg);
+  background-image: url(../images/backgound-person.png);
   background-size: cover;
   background-position: top center;
-
   z-index: 1;
 }
 
@@ -921,18 +907,25 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-
   margin: 3vw 0vw 5vw;
-
   background: var(--color-black);
-
   color: var(--color-white)
 }
 
-.contact-icon-content h2 {
-  margin: 3rem 3rem 3rem 0rem;
-  padding: 1rem 1rem 1rem 0rem;
+.section-container {
+  width: 100%;
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
+.contact-icon-content {
+  display: flex;
+  align-items: center;
+}
+
+.contact-icon-content h2 {
+  margin: 3rem 0;
   font-size: 3rem;
   color: var(--color-white);
 }
@@ -940,7 +933,6 @@ body {
 .contact-icons-wrapper {
   display: flex;
   align-items: center;
-  flex-direction: row;
   flex-wrap: wrap;
 }
 
@@ -948,7 +940,6 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-
   margin: 0rem 3rem;
   padding: 1rem;
 }
@@ -960,13 +951,10 @@ body {
 .contact-icon {
   height: 40px;
   width: 40px;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   margin-right: 2rem;
-
   background: var(--color-white);
   padding: 1rem;
   border-radius: 50%;
