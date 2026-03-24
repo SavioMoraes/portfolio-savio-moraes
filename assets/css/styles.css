@@ -211,6 +211,7 @@ body {
   padding-top: 50px;
   padding-left: 10px;
   padding-right: 10px;
+  border: 2px solid red;
 }
 
 /* telas maiores */
@@ -719,38 +720,31 @@ body {
     margin: 1.5rem;
   }
 }
-
-
 /* Final da sobre */
 
+/* Início da seção de projetos */
 #projects {
   height: auto;
   width: 100%;
-  background: var(--color-black);
-
+  background: #191919;
   display: flex;
   flex-direction: column;
+  padding-bottom: 70px;
+}
+
+.projects-title {
+  width: 100%;
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .projects-title h2 {
   margin-top: 60px;
-  padding: 1rem;
-
   font-size: 3rem;
   color: var(--color-white);
+  text-align: left;
 }
-
-/* .wrapper-projects {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  flex-direction: row;
-
-  height: 500px;
-
-  margin-top: 2rem;
-} */
 
 .container-projects {
   height: 100%;
@@ -765,39 +759,26 @@ body {
   height: 500px;
   width: 100%;
   max-width: 1020px;
-
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-
   height: 500px;
-
   margin-top: 2rem;
   padding: 0px 20px;
 }
 
 .card-project {
-  /* width: 320px; */
-  /* height: 450px; */
-
   height: 100%;
   width: 100%;
-
   padding: 30px 20px 20px;
-  /* margin: 0px 10px; */
-
   position: relative;
   background: var(--color-white);
-
   display: flex;
   align-items: center;
   flex-direction: column;
-
   border-radius: 20px;
-
   z-index: 1;
-
 }
 
 .card-project::after {
@@ -805,25 +786,12 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-
   height: 40%;
   width: 100%;
-
   background: var(--color-purple);
   border-radius: 20px 20px 0px 0px;
-
   z-index: -1;
 }
-
-/* .content-project {
-  height: 100%;
-  width: 100%;
-
-  display: flex;
-  flex-direction: column;
-
-  z-index: 1;
-} */
 
 .image-project {
   max-height: 240px;
@@ -871,7 +839,6 @@ body {
 .cta-project {
   width: 200px;
   margin: auto auto 15px auto;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -879,15 +846,11 @@ body {
 
 .cta-project a {
   padding: 5px 16px;
-
   font-size: 1.25rem;
   color: var(--color-white);
   background: var(--color-purple);
-
   border-radius: 10px;
-
   text-decoration: none;
-
   transition: opacity .3s ease;
 }
 
@@ -952,12 +915,11 @@ body {
   }
 }
 
-/* Final do projetc */
+/* Final da seção de projetos */
 
 #contacts {
   display: flex;
   flex-direction: column;
-
   width: 100%;
 
   margin: 3vw 0vw 5vw;
