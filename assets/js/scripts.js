@@ -14,19 +14,16 @@ let swiper = createSwiper(
 
 function createSwiper(container, pagination, nextButton, prevButton) {
   return new Swiper(container, {
-    slidesPerView: 1,
+    slidesPerView: handleWidth(),
     spaceBetween: 20,
-
     centeredSlides: true,
     centeredSlidesBounds: true,
     slidesOffsetBefore: 0,
     slidesOffsetAfter: 0,
-
     pagination: {
       el: pagination,
       clickable: true,
     },
-
     navigation: {
       nextEl: nextButton,
       prevEl: prevButton,
@@ -50,16 +47,35 @@ window.addEventListener("resize", () => {
 menuHamburguer.addEventListener("click", (e) => {
   e.stopPropagation();
   nav.classList.toggle("active");
+
+  document.body.style.overflow =
+    nav.classList.contains("active") ? "hidden" : "auto";
 });
 
-links.forEach((item) => {
-  item.addEventListener("click", () => {
-    nav.classList.remove("active");
+links.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    links.forEach(l => l.classList.remove("active-link"));
+    link.classList.add("active-link");
+
+    const target = link.getAttribute("href");
+
+    setTimeout(() => {
+      nav.classList.remove("active");
+      document.body.style.overflow = "auto";
+
+      document.querySelector(target).scrollIntoView({
+        behavior: "smooth"
+      });
+
+    }, 300);
   });
 });
 
 overlay.addEventListener("click", () => {
   nav.classList.remove("active");
+  document.body.style.overflow = "auto";
 });
 
 document.addEventListener("click", (event) => {
@@ -68,6 +84,7 @@ document.addEventListener("click", (event) => {
 
   if (!isInsideMenu && !isButton && nav.classList.contains("active")) {
     nav.classList.remove("active");
+    document.body.style.overflow = "auto";
   }
 });
 
@@ -77,25 +94,4 @@ window.addEventListener("scroll", () => {
   } else {
     header.style.background = "transparent";
   }
-});
-
-links.forEach((link) => {
-  link.addEventListener("click", (e) => {
-    e.preventDefault();
-
-    links.forEach(l => l.classList.remove("active-link"));
-
-    link.classList.add("active-link");
-
-    const target = link.getAttribute("href");
-
-    setTimeout(() => {
-      nav.classList.remove("active");
-
-      document.querySelector(target).scrollIntoView({
-        behavior: "smooth"
-      });
-
-    }, 300);
-  });
 });
