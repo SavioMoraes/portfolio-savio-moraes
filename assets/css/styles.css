@@ -538,8 +538,8 @@ body {
 /* Final da primeira página */
 
 #about {
-  height: auto;
   width: 100%;
+  height: auto;
   background: var(--color-black);
 
   display: flex;
@@ -568,21 +568,17 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-
   height: 100%;
   width: 100%;
-
   background:
     linear-gradient(.25turn, transparent 30%, var(--color-black)),
     linear-gradient(.5turn, transparent 30%, var(--color-black)),
     linear-gradient(1turn, transparent 65%, var(--color-black));
-
 }
 
 .img-wrapper img {
   height: 100%;
   width: 100%;
-
   object-fit: cover;
 }
 
@@ -590,11 +586,9 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
-
   width: 50%;
-
-  padding: 3rem;
-  margin: 6rem 0rem;
+  padding: 48px;
+  margin: 96px 20px;
 }
 
 .section-subtitle h2 p {
