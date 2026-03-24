@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -18,11 +17,12 @@
   <link rel="stylesheet" href="./assets/css/styles.css">
   <link rel="icon" type="image/png" href="./assets/images/savio moreira de moraes_engenheiro de software_desenvolvedor web full stack_desenvolvedor front end_desenvolvedor back end_javascript_typescrit_react_nodejs_python.png">
   <title>Portfólio | Sávio Moraes</title>
+  <meta name="description" content="Portfólio de Sávio Moraes, desenvolvedor Fullstack com experiência em JavaScript, TypeScript, Angular, React, Node.js Python, MySQL, MongoDB, HTML e CSS. Confira meus projetos e entre em contato!">
 </head>
 
 <body>
   <!-- Header -->
-  <section id="header">
+  <header id="header">
     <div class="container-navbar">
       <a class="header-title" href="/">
         <h1>
@@ -41,12 +41,12 @@
         </ul>
       </nav>  
     </div>
-  </section>
-    <!-- End Header -->
-
-  <!-- Person -->
-  <div class="container">
-
+  </header>
+  <!-- End Header -->
+  <!-- Main -->
+  <main class="container">
+    
+    <!-- Person -->
     <section id="person">
       <div class="person-content">
         <div class="person-wrapper">
@@ -170,7 +170,7 @@
         </div>
       </div>
     </section>
-    <!-- End about -->
+    <!-- End About -->
   
     <!-- Projects -->
     <section id="projects">
@@ -178,14 +178,9 @@
         <div class="projects-title">
           <h2>PROJETOS 🧩</h2>
         </div>
-  
-        <div class="swiper mySwiper">
-          <!-- wrapper-projects -->
-  
+        <!-- Slider -->
+        <div class="swiper mySwiper">  
           <div class="swiper-wrapper">
-  
-            <!-- content-project -->
-            <!-- início card -->
             <div class="swiper-slide card-project">
               <div class="image-project">
                 <a href="https://app-food-virid.vercel.app/">
@@ -208,8 +203,7 @@
                 </a>
               </div>
             </div>
-            <!-- fim card -->
-            <!-- início card -->
+    
             <div class="swiper-slide card-project">
               <div class="image-project">
                 <a href="https://saviomoraes.github.io/todolist-fullstack/">
@@ -232,8 +226,7 @@
                 </a>
               </div>
             </div>
-            <!-- fim card -->
-            <!-- início card -->
+        
             <div class="swiper-slide card-project">
               <div class="image-project">
                 <a href="https://project-react-movies-libs.vercel.app/">
@@ -256,8 +249,7 @@
                 </a>
               </div>
             </div>
-            <!-- fim card -->
-            <!-- início card -->
+            
             <div class="swiper-slide card-project">
               <div class="image-project">
                 <a href="https://tela-de-login-com-react-nine.vercel.app/">
@@ -280,8 +272,7 @@
                 </a>
               </div>
             </div>
-            <!-- fim card -->
-            <!-- início card -->
+            
             <div class="swiper-slide card-project">
               <div class="image-project">
                 <a href="https://project-movie-card-library-crud-flame.vercel.app/">
@@ -304,8 +295,7 @@
                 </a>
               </div>
             </div>
-            <!-- fim card -->
-            <!-- início card -->
+            
             <div class="swiper-slide card-project">
               <div class="image-project">
                 <a href="https://saviomoraes.github.io/project-to-do-list/">
@@ -328,8 +318,7 @@
                 </a>
               </div>
             </div>
-            <!-- fim card -->
-            <!-- início card -->
+            
             <div class="swiper-slide card-project">
               <div class="image-project">
                 <a href="https://saviomoraes.github.io/project-pixels-art/">
@@ -352,8 +341,7 @@
                 </a>
               </div>
             </div>
-            <!-- fim card -->
-            <!-- início card -->
+            
             <div class="swiper-slide card-project">
               <div class="image-project">
                 <a href="https://saviomoraes.github.io/project-shopping-cart/">
@@ -376,15 +364,14 @@
                 </a>
               </div>
             </div>
-            <!-- fim card -->
-  
           </div>
   
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
           <div class="swiper-pagination"></div>  
   
-        </div>  
+        </div>
+        <!-- End Slider -->
       </div>
     </section>
     <!-- End Projects -->
@@ -429,8 +416,8 @@
       </div>
     </section>
     <!-- End Contacts -->
-  </div>
-
+  </main>
+  <!-- End Main -->
   <!-- Footer -->
   <section id="footer">
     <div class="container-footer">
@@ -439,9 +426,12 @@
     </div>
   </section>
   <!-- End Footer -->
+  
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
   <script src="./assets/js/scripts.js"></script>
+  <!-- End Scripts -->
 
 </body>
 

@@ -240,7 +240,6 @@ body {
 .person-wrapper {
   width: 100%;
   max-width: 500px;
-  transform: translate(80px);
 }
 
 .person-content div h1 {
@@ -439,6 +438,7 @@ body {
   background-size: cover;
   background-position: top center;
   z-index: 1;
+  margin-right: 50px;
 }
 
 .person-background::after {
