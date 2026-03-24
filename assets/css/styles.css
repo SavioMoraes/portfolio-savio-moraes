@@ -39,9 +39,9 @@ body {
 /* ============================= */
 .container-navbar {
   width: 100%;
-  max-width: 1500px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 15px 0;
+  padding: 15px 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -49,13 +49,13 @@ body {
 
 /* telas maiores */
 @media (min-width: 1440px) {
-  .container {
+  .container-navbar {
     max-width: 1300px;
   }
 }
 
 @media (min-width: 1840px) {
-  .container {
+  .container-navbar {
     max-width: 1400px;
   }
 }
@@ -66,7 +66,6 @@ body {
 
 .header-title h1 {
   color: var(--color-white);
-
   font-size: 2rem;
   transition: opacity .3s ease;
 }
@@ -96,7 +95,6 @@ body {
 .navbar-links li a {
   text-decoration: none;
   color: var(--color-white);
-
   font-size: 1.4rem;
   font-weight: 700;
 }
@@ -199,7 +197,7 @@ body {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding-top: 50px;
+  padding-top: 100px;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -428,7 +426,6 @@ body {
     font-size: 1vw;
   }
 }
-
 
 .person-background {
   height: 100vh;
@@ -718,40 +715,33 @@ body {
   padding-bottom: 70px;
 }
 
-.projects-title {
+.projects-container {
   width: 100%;
   max-width: 1020px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-.projects-title h2 {
+.projects-title {
+  width: 100%;
   margin-top: 60px;
+}
+
+.projects-title h2 {
   font-size: 3rem;
   color: var(--color-white);
   text-align: left;
 }
 
-.container-projects {
-  height: 100%;
-  width: 100%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .swiper {
-  height: 500px;
   width: 100%;
-  max-width: 1020px;
+  max-width: 100%;
+  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
-  height: 500px;
   margin-top: 2rem;
-  padding: 0px 20px;
+  padding: 0;
 }
 
 .card-project {
@@ -902,7 +892,7 @@ body {
 }
 
 /* Final da seção de projetos */
-
+/* Início da seção de contatos */
 #contacts {
   display: flex;
   flex-direction: column;
@@ -919,30 +909,35 @@ body {
   padding: 0 20px;
 }
 
-.contact-icon-content {
+.contact-content {
+  width: 100%;
   display: flex;
   align-items: center;
-}
-
-.contact-icon-content h2 {
-  margin: 3rem 0;
-  font-size: 3rem;
-  color: var(--color-white);
+  margin-top: 30px;
 }
 
 .contact-icons-wrapper {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.contact-icon-content {
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 0rem 3rem;
-  padding: 1rem;
+  flex-wrap: wrap;
+  margin-left: 60px;
 }
+
+.contact-icon-content {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.contact-content h2 {
+  font-size: 3.5rem;
+  color: var(--color-white);
+  text-align: left;
+}
+
 
 .contact-icon-content a {
   text-decoration: none;
@@ -955,14 +950,15 @@ body {
   justify-content: center;
   align-items: center;
   margin-right: 2rem;
-  background: var(--color-white);
   padding: 1rem;
   border-radius: 50%;
 }
 
-.contact-icon i {
-  font-size: 2rem;
-  color: var(--color-blue);
+.contact-icon img:hover {
+  transition: all .3s ease;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
 }
 
 .contact-info span {
@@ -1014,6 +1010,7 @@ body {
     font-size: .7vw;
   }
 }
+/* Final da seção de contatos */
 
 #footer {
   height: auto;
