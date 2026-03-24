@@ -7,12 +7,19 @@ let header = document.getElementById('header');
 
 function createSwiper(container, pagination, nextButton, prevButton) {
   return new Swiper(container, {
-    slidesPerView: handleWidth(),
-    spaceBetween: 30,
+    slidesPerView: 1,
+    spaceBetween: 20,
+
+    centeredSlides: true,
+    centeredSlidesBounds: true,
+    slidesOffsetBefore: 0,
+    slidesOffsetAfter: 0,
+
     pagination: {
       el: pagination,
       clickable: true,
     },
+    
     navigation: {
       nextEl: nextButton,
       prevEl: prevButton,
@@ -21,10 +28,10 @@ function createSwiper(container, pagination, nextButton, prevButton) {
 }
 
 function handleWidth() {
-  let getWidth = window.innerWidth;
+  let width = window.innerWidth;
 
-  if (getWidth <= 480) return 1;
-  if (getWidth <= 768) return 2;
+  if (width <= 480) return 1;
+  if (width <= 768) return 2;
   return 3;
 }
 
