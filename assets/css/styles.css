@@ -886,6 +886,24 @@ body {
 }
 
 /* ============================= */
+/* TABLET GRANDE (até 1024px) */
+/* ============================= */
+@media (max-width: 1024px) {
+  /* HEADER */
+  .container-navbar {
+    padding: 0 40px;
+  }
+
+  .navbar {
+    max-width: 380px;
+  }
+
+  .navbar-links li a {
+    font-size: 1.8rem;
+  }
+}
+
+/* ============================= */
 /* TABLET (até 768px) */
 /* ============================= */
 @media (max-width: 768px) {
