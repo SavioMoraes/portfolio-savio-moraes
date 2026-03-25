@@ -886,16 +886,20 @@ body {
 /* ============================= */
 @media (max-width: 768px) {
   /* ===== HEADER ===== */
+  #header {
+    height: 90px;
+  }
+
   .container-navbar {
-    padding: 12px 20px;
+    padding: 0 24px;
   }
 
   .header-title {
-    margin-left: 5px;
+    margin-left: 10px;
   }
 
   .header-title h1 {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
   }
 
   /* ===== NAVBAR ===== */
@@ -963,7 +967,7 @@ body {
     border: none;
     background: transparent;
     border-top: 3px solid var(--color-white);
-    margin-right: 5px;
+    margin-right: 10px;
     position: relative;
     z-index: 1002;
   }
@@ -1003,8 +1007,13 @@ body {
 
   /* ===== PERSON ===== */
   #person {
+    display: flex ;
     flex-direction: column;
     height: auto;
+    margin-top: 30px;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+
   }
 
   .person-content {
@@ -1014,12 +1023,13 @@ body {
   }
 
   .person-wrapper {
-    max-width: 600px;
+    max-width: 768px;
   }
 
   .person-name {
     width: fit-content;
-    margin: 0 auto 15px auto;
+    margin: 0 auto 0 auto;
+    padding: 0 0 20px 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -1043,15 +1053,37 @@ body {
 
   .person-background {
     width: 100%;
-    height: auto;
+    height: 130vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-right: 0;
-    padding: 40px 0;
     background-size: cover;
-    background-position: center;
+    background-repeat: no-repeat;
+    background-position: center 30%;
+  }
+
+  .wrapper-profile-photo {
+    transform: translateY(-100px);
   }
 
   .profile-photo {
-    max-width: 220px;
+    max-width: 280px;
+  }
+
+  .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin-top: 20px;
+    transform: translateY(-100px);
+  }
+
+  .links a img {
+    width: 42px;
+    height: 42px;
   }
 
   /* ===== STACKS ===== */
@@ -1061,29 +1093,38 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin: 20px 0;
+    padding: 0 0 50px 0;
   }
 
   .stacks {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-    gap: 16px;
     padding: 12px 0;
     width: 100%;
   }
 
+  .stacks li {
+    gap: 50px;
+  }
+
   .stacks li img {
-    width: 35px;
+    width: 45px;
     height: auto;
     transition: transform .3s ease;
   }
 
   /* ===== ABOUT ===== */
   #about {
+    display: flex;
     flex-direction: column;
+    width: calc(100vw);
+    margin-left: calc(-53vw + 50%);
+     margin-right: calc(-53vw + 50%);
+    margin-top: -90px;
+    padding: 0;
   }
 
   .background-about {
@@ -1092,26 +1133,86 @@ body {
 
   .box-about {
     width: 100%;
-    padding: 30px;
-    margin: 20px 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    color: var(--color-white);
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.75),
+        rgba(0, 0, 0, 0.9)
+      ),
+      url('../images/img.2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .section-subtitle,
+  .box-about h3,
+  .box-about h4,
+  .button-cta {
+    width: 100%;
+    max-width: 700px;
+  }
+
+  .section-subtitle {
+    padding-top: 70px;
+  }
+
+  .section-subtitle h2 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px 0;
   }
 
   .section-subtitle h2 p {
-    font-size: 2.2rem;
+    font-size: 2.8rem;
   }
 
   .box-about h3 {
-    font-size: 1.6rem;
-    text-align: center;
+    font-size: 2.4rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: left;
+  }
+
+  .box-about h3 p {
+    display: inline-block;
+    padding: 4px 6px;
+    border-radius: 4px;
+    font-size: 2rem;
+    background: var(--color-pink);
+    color: var(--color-black);
   }
 
   .box-about h4 {
-    font-size: 1.3rem;
-    text-align: center;
+    font-size: 2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+
+  .box-about h4 p {
+    display: inline-block;
+    color: var(--color-blue);
+    font-size: 2.4rem;
   }
 
   .button-cta {
-    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .button-cta a {
+    padding: 14px 30px;
+    font-size: 1.8rem;
+    border-radius: 10px;
+    background: var(--color-white);
+    color: var(--color-black);
+    text-decoration: none;
   }
 
   /* ===== PROJECTS ===== */
