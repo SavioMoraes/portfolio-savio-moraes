@@ -35,7 +35,7 @@ function handleWidth() {
   let width = window.innerWidth;
 
   if (width <= 480) return 1;
-  if (width <= 768) return 2;
+  if (width <= 768) return 1;
   return 3;
 }
 
