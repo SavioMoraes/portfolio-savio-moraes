@@ -87,11 +87,3 @@ document.addEventListener("click", (event) => {
     document.body.style.overflow = "auto";
   }
 });
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY >= 200) {
-    header.style.background = "var(--color-black)";
-  } else {
-    header.style.background = "var(--color-black)";
-  }
-});
