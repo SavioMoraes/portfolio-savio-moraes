@@ -478,8 +478,10 @@ body {
 }
 
 .section-subtitle h2 p {
+  font-family: 'Stalinist One', cursive;
   display: inline-block;
-  font-size: calc(1.4vw + 1.2rem);
+  font-size: calc(.8vw + .8rem);
+  margin-left: 28px;
 }
 
 .section-subtitle h2 p:nth-child(2) span {
@@ -499,8 +501,9 @@ body {
   width: fit-content;
   padding: 2px 4px;
   border-radius: 4px;
-  color: var(--color-red);
-  background: var(--color-white);
+  color: var(--color-black);
+  background: var(--color-gold);
+  font-size: .95em;
 }
 
 .box-about h4 {
@@ -536,11 +539,12 @@ body {
   text-decoration: none;
   border-radius: 10px;
   cursor: pointer;
+  filter: brightness(.8);
 }
 
 .button-cta a:hover {
   transition: all .3s ease;
-  filter: brightness(.8);
+  filter: brightness(1);
 }
 
 @media (min-width: 769px) and (max-width: 1440px) {
