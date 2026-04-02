@@ -1249,7 +1249,7 @@ body {
     padding: 4px 6px;
     border-radius: 4px;
     font-size: 2rem;
-    background var(--color-white):
+    background: var(--color-white);
     color: var(--color-black);
   }
 
