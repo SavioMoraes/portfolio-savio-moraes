@@ -1523,8 +1523,7 @@ body {
     justify-content: center;
     width: 100%;
     position: fixed;
-    background: transparent;
-    transition: all .3s ease-out;
+    background-image: url('../images/bg-color.png');
     z-index: 2;
     padding: 10px 0;
   }
