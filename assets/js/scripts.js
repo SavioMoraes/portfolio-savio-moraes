@@ -1,4 +1,5 @@
 const menuHamburguer = document.querySelector(".menu-hamburguer");
+const menuClose = document.querySelector(".menu-close");
 const nav = document.querySelector(".navbar");
 const links = document.querySelectorAll(".navbar-links li a");
 const overlay = document.querySelector(".menu-overlay");
