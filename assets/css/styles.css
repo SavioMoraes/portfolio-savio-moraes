@@ -231,14 +231,7 @@ body {
 }
 
 .person-content div h1 span {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0px;
-  height: 100%;
-  background: var(--color-gold);
-  animation: written_text_box 1s ease;
-  animation-delay: .5s;
+  display: none;
 }
 
 .person-content div h1:nth-child(1) span {
@@ -688,6 +681,10 @@ body {
 }
 
 .cta-project a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   padding: 5px 16px;
   font-size: 1.25rem;
   color: var(--color-white);
@@ -696,6 +693,14 @@ body {
   text-decoration: none;
   transition: opacity .3s ease;
   opacity: .7;
+  white-space: nowrap;
+}
+
+.cta-project a i,
+.cta-project a svg,
+.cta-project a img {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .cta-project a:hover {
@@ -1805,26 +1810,47 @@ body {
   }
 
   .person-name {
-    width: fit-content;
-    margin: 0 auto 0 auto;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
     padding: 0 10px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    text-align: left;
+    gap: 6px;
+    padding-left: 8px;
   }
 
   .person-content div h1 {
-    font-size: 3rem;
-    line-height: 1.5;
-    letter-spacing: 1.5px;
+    padding: 0;
+    color: transparent;
+    position: relative;
+    width: fit-content;
+    font-size: 2.6rem;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    margin: 0;
   }
 
   .person-content div h1:nth-child(3) {
-    font-size: 3rem;
+    animation: written_text_name .5s ease forwards;
+    animation-delay: 3s;
+    margin-top: 2px;
+  }
+
+  @keyframes written_text_name {
+    100% {
+      font-family: 'Stalinist One', cursive;
+      font-size: 2.2em;
+      color: var(--color-gold);
+    }
   }
 
   .person-content div h1:nth-child(4) {
-    font-size: 2rem;
+    animation-delay: 4s;
+    font-size: 2.2rem;
+    margin-top: 4px;
   }
 
   .person-background {
@@ -1896,8 +1922,9 @@ body {
     justify-content: center;
     align-items: flex-start;
     width: 100%;
-    height: 80vh;
-    padding: 40px 24px;
+    height: auto;
+    min-height: 100vh;
+    padding: 20px 24px 40px 24px;
     margin: 0;
     color: var(--color-white);
     position: relative;
@@ -1925,6 +1952,9 @@ body {
   .section-subtitle h2 p {
     display: inline-block;
     font-size: 2rem;
+    text-align: center;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
   }
 
   .section-subtitle h2 p:nth-child(2) span {
@@ -1936,31 +1966,32 @@ body {
 
   .box-about h3 {
     margin: 28px 0 16px 0;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     line-height: 1.8;
-    text-align: justify;
+    text-align: left;
+    text-wrap: wrap;
   }
 
   .box-about h3 p {
     display: inline-block;
-    padding: 2px 4px;
+    padding: 8px 4px;
     border-radius: 4px;
-    color: var(--color-black);
-    background: var(--color-pink);
+    color: var(--color-gold);
+    background: rgba(0, 0, 0, 0.55);
+    text-align: justify;
   }
 
   .box-about h4 {
     margin: 16px 0;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     line-height: 1.8;
     text-align: justify;
   }
 
   .box-about h4 p {
     display: inline;
-    padding: 2px 4px;
-    color: var(--color-blue);
-    font-size: 1.6rem;
+    color: var(--color-red);
+    font-size: 2.1rem;
   }
 
   .button-cta {
@@ -1974,11 +2005,11 @@ body {
     display: inline-block;
     padding: 12px 28px;
     font-size: 1.3rem;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Stalinist One', cursive;
     font-weight: 700;
     letter-spacing: 0.1rem;
     color: var(--color-black);
-    background: var(--color-white);
+    background: var(--color-red);
     text-align: center;
     text-decoration: none;
     border-radius: 10px;
@@ -1991,9 +2022,26 @@ body {
   }
 
   /* ===== PROJECTS ===== */
+  #projects {
+    position: relative;
+    z-index: 2;
+    margin-top: 0;
+    padding-top: 0;
+    background-image: url('../images/projects-background.png');
+    background-size: cover;
+  }
+
+  .projects-title {
+    position: relative;
+    z-index: 3;
+    margin-bottom: 20px;
+  }
+
   .projects-title h2 {
     font-size: 2.2rem;
     text-align: left;
+    margin: 0;
+    padding-top: 10px;
   }
 
   .swiper-wrapper-container {
@@ -2005,7 +2053,7 @@ body {
     max-width: 100%;
     height: auto;
     margin-top: 2rem;
-    padding: 20px 0;
+    padding: 20px 0 0 0;
   }
 
   .swiper-wrapper {
@@ -2020,20 +2068,24 @@ body {
     height: auto;
   }
 
+  .swiper-pagination-bullet-active {
+    background: var(--color-gold);
+  }
+
   .card-project {
     width: 85%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 20px;
-    background: var(--color-white);
+    padding: 20px 20px 50px 20px;
+    background: var(--color-black);
     border-radius: 20px;
     position: relative;
     z-index: 1;
   }
 
   .card-project p {
-    color: #3d3d4b;
+    color: var(--color-white);
     font-weight: bold;
     font-size: 1.1rem;
     text-align: center;
