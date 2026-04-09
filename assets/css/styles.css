@@ -1910,8 +1910,9 @@ body {
     justify-content: center;
     align-items: flex-start;
     width: 100%;
-    height: 80vh;
-    padding: 40px 24px;
+    height: auto;
+    min-height: 100vh;
+    padding: 20px 24px 40px 24px;
     margin: 0;
     color: var(--color-white);
     position: relative;
@@ -1939,6 +1940,9 @@ body {
   .section-subtitle h2 p {
     display: inline-block;
     font-size: 2rem;
+    text-align: center;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
   }
 
   .section-subtitle h2 p:nth-child(2) span {
@@ -1950,31 +1954,32 @@ body {
 
   .box-about h3 {
     margin: 28px 0 16px 0;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     line-height: 1.8;
-    text-align: justify;
+    text-align: left;
+    text-wrap: wrap;
   }
 
   .box-about h3 p {
     display: inline-block;
-    padding: 2px 4px;
+    padding: 8px 4px;
     border-radius: 4px;
-    color: var(--color-black);
-    background: var(--color-pink);
+    color: var(--color-gold);
+    background: rgba(0, 0, 0, 0.55);
+    text-align: justify;
   }
 
   .box-about h4 {
     margin: 16px 0;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     line-height: 1.8;
     text-align: justify;
   }
 
   .box-about h4 p {
     display: inline;
-    padding: 2px 4px;
-    color: var(--color-blue);
-    font-size: 1.6rem;
+    color: var(--color-red);
+    font-size: 2.1rem;
   }
 
   .button-cta {
@@ -1988,11 +1993,11 @@ body {
     display: inline-block;
     padding: 12px 28px;
     font-size: 1.3rem;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Stalinist One', cursive;
     font-weight: 700;
     letter-spacing: 0.1rem;
     color: var(--color-black);
-    background: var(--color-white);
+    background: var(--color-red);
     text-align: center;
     text-decoration: none;
     border-radius: 10px;
