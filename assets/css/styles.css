@@ -231,14 +231,7 @@ body {
 }
 
 .person-content div h1 span {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0px;
-  height: 100%;
-  background: var(--color-gold);
-  animation: written_text_box 1s ease;
-  animation-delay: .5s;
+  display: none;
 }
 
 .person-content div h1:nth-child(1) span {
@@ -1805,26 +1798,47 @@ body {
   }
 
   .person-name {
-    width: fit-content;
-    margin: 0 auto 0 auto;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
     padding: 0 10px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    text-align: left;
+    gap: 6px;
+    padding-left: 8px;
   }
 
   .person-content div h1 {
-    font-size: 3rem;
-    line-height: 1.5;
-    letter-spacing: 1.5px;
+    padding: 0;
+    color: transparent;
+    position: relative;
+    width: fit-content;
+    font-size: 2.6rem;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    margin: 0;
   }
 
   .person-content div h1:nth-child(3) {
-    font-size: 3rem;
+    animation: written_text_name .5s ease forwards;
+    animation-delay: 3s;
+    margin-top: 2px;
+  }
+
+  @keyframes written_text_name {
+    100% {
+      font-family: 'Stalinist One', cursive;
+      font-size: 2.2em;
+      color: var(--color-gold);
+    }
   }
 
   .person-content div h1:nth-child(4) {
-    font-size: 2rem;
+    animation-delay: 4s;
+    font-size: 2.2rem;
+    margin-top: 4px;
   }
 
   .person-background {
