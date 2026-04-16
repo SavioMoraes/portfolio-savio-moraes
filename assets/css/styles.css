@@ -1813,13 +1813,12 @@ body {
     width: 100%;
     max-width: 320px;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0 10px 100px 10px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
     gap: 6px;
-    padding-left: 8px;
   }
 
   .person-content div h1 {
@@ -1836,7 +1835,7 @@ body {
   .person-content div h1:nth-child(3) {
     animation: written_text_name .5s ease forwards;
     animation-delay: 3s;
-    margin-top: 2px;
+    margin-top: 5px;
   }
 
   @keyframes written_text_name {
@@ -1863,21 +1862,31 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-size: cover;
+    position: relative;
+    background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
   }
 
   .wrapper-profile-photo {
-    margin-top: -50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: none;
+    margin-top: -30px;
   }
 
   .profile-photo {
     width: 100%;
+    max-width: 220px;
+    height: auto;
+    border-radius: 50%;
   }
 
   .links a img {
     width: 30px;
     height: 30px;
+    margin-top: 130px;
   }
 
   /* ===== STACKS ===== */
@@ -1966,7 +1975,7 @@ body {
 
   .box-about h3 {
     margin: 28px 0 16px 0;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     line-height: 1.8;
     text-align: left;
     text-wrap: wrap;
@@ -1979,11 +1988,12 @@ body {
     color: var(--color-gold);
     background: rgba(0, 0, 0, 0.55);
     text-align: justify;
+    font-size: 1.5rem;
   }
 
   .box-about h4 {
     margin: 16px 0;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     line-height: 1.8;
     text-align: justify;
   }
@@ -1991,7 +2001,7 @@ body {
   .box-about h4 p {
     display: inline;
     color: var(--color-red);
-    font-size: 2.1rem;
+    font-size: 1.8rem;
   }
 
   .button-cta {
@@ -2004,11 +2014,11 @@ body {
   .button-cta a {
     display: inline-block;
     padding: 12px 28px;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-family: 'Stalinist One', cursive;
     font-weight: 700;
     letter-spacing: 0.1rem;
-    color: var(--color-black);
+    color: var(--color-white);
     background: var(--color-red);
     text-align: center;
     text-decoration: none;
