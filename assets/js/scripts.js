@@ -37,7 +37,8 @@ function handleWidth() {
 
   if (width <= 480) return 1;
   if (width <= 768) return 1;
-  return 3;
+  if (width <= 1024) return 1;
+  if (width > 1024) return 1;
 }
 
 window.addEventListener("resize", () => {
