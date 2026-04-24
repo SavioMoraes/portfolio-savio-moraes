@@ -197,6 +197,7 @@ body {
 }
 
 .person-wrapper {
+  padding-left: 14%;
   width: 100%;
   max-width: 500px;
 }
@@ -254,10 +255,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 40px 0;
+  padding: 40px 0 20px 0;
   width: 100%;
   max-width: 500px;
-  margin-bottom: 100px;
+  margin-bottom: 0;
 }
 
 .stacks-content {
@@ -604,6 +605,15 @@ body {
   padding: 0;
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--color-red);
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--color-gold);
+}
+
 .card-project {
   height: 100%;
   width: 100%;
@@ -630,8 +640,8 @@ body {
 }
 
 .image-project {
-  max-height: 240px;
-  max-width: 250px;
+  max-height: 500px;
+  max-width: 600px;
   height: 100%;
   width: 100%;
   position: relative;
@@ -919,8 +929,8 @@ body {
 @keyframes written_text_name {
   100% {
     font-family: 'Stalinist One', cursive;
-    font-size: 3.6em;
-    color: var(--color-red);
+    font-size: 3em;
+    color: var(--color-gold);
   }
 }
 
@@ -933,24 +943,6 @@ body {
   100% {
     width: 0;
     left: 100%;
-  }
-}
-
-/* ============================= */
-/* TABLET GRANDE (até 1024px) */
-/* ============================= */
-@media (max-width: 1024px) {
-  /* HEADER */
-  .container-navbar {
-    padding: 0 40px;
-  }
-
-  .navbar {
-    max-width: 380px;
-  }
-
-  .navbar-links li a {
-    font-size: 1.8rem;
   }
 }
 
