@@ -213,10 +213,12 @@ body {
 }
 
 .person-content div h1:nth-child(1) {
+  font-size: 4em;
   animation-delay: 1s;
 }
 
 .person-content div h1:nth-child(2) {
+  font-size: 4em;
   animation-delay: 2s;
 }
 
