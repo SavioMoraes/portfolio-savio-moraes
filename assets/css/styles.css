@@ -26,6 +26,7 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+/* ============ HEADER =============== */
 #header {
   display: flex;
   justify-content: center;
@@ -49,23 +50,10 @@ body {
   max-width: 1200px;
   height: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-/* telas maiores */
-@media (min-width: 1440px) {
-  .container-navbar {
-    max-width: 1300px;
-  }
-}
-
-@media (min-width: 1840px) {
-  .container-navbar {
-    max-width: 1400px;
-  }
 }
 
 .header-title {
@@ -91,7 +79,7 @@ body {
 }
 
 .navbar {
-  max-width: 350px;
+  max-width: 450px;
   width: 100%;
 }
 
@@ -111,14 +99,14 @@ body {
 .navbar-links li a {
   text-decoration: none;
   color: var(--color-white);
-  font-size: 1.4rem;
+  font-size: 2.2rem;
   font-weight: 700;
-  -webkit-text-stroke: 1px black;
+  -webkit-text-stroke: .3px var(--color-black);
 }
 
 .navbar-links li a.active-link {
   color: var(--color-red);
-  -webkit-text-stroke: 1px var(--color-black);
+  -webkit-text-stroke: .3px var(--color-black);
 }
 
 .navbar-links li a:hover {
@@ -130,24 +118,7 @@ body {
 .menu-hamburguer {
   display: none;
 }
-
-@media (min-width: 1840px) {
-  .header-title h1 {
-    font-size: calc(1vw + .8rem);
-  }
-
-  .navbar {
-    max-width: 25vw;
-  }
-
-  .navbar-links li {
-    margin: 1rem;
-  }
-
-  .navbar-links li a {
-    font-size: calc(1vw + .3rem);
-  }
-}
+/* Final do header */
 
 /* ============================= */
 /* CONTAINER MAIN */
@@ -157,23 +128,12 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding-top: 70px;
-  padding-left: 10px;
-  padding-right: 10px;
 }
 
-/* telas maiores */
-@media (min-width: 1440px) {
-  .container {
-    max-width: 1300px;
-  }
-}
 
-@media (min-width: 1840px) {
-  .container {
-    max-width: 1400px;
-  }
-}
-
+/* ============================= */
+        /* PERSON SECTION */
+/* ============================= */
 #person {
   height: 100vh;
   width: 100%;
@@ -197,7 +157,7 @@ body {
 }
 
 .person-wrapper {
-  padding-left: 14%;
+  padding-left: 3%;
   width: 100%;
   max-width: 500px;
 }
@@ -213,23 +173,29 @@ body {
 }
 
 .person-content div h1:nth-child(1) {
-  font-size: 4em;
+  font-size: 3.2em;
   animation-delay: 1s;
 }
 
 .person-content div h1:nth-child(2) {
-  font-size: 4em;
+  font-size: 3.2em;
   animation-delay: 2s;
 }
 
 .person-content div h1:nth-child(3) {
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
   animation: written_text_name .5s ease forwards;
   animation-delay: 3s;
+  font-family: 'Stalinist One', cursive;
+  font-size: 3em;
+  color: var(--color-gold);
+  will-change: transform, opacity;
 }
 
 .person-content div h1:nth-child(4) {
   animation-delay: 4s;
-  font-size: 3em;
+  font-size: 2.8em;
   margin-bottom: 10px;
 }
 
@@ -283,7 +249,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   padding: 12px 0;
-  gap: 20px;
+  gap: 27px;
 }
 
 .stacks li {
@@ -316,16 +282,6 @@ body {
   font-size: 1.25vh;
 }
 
-@media (max-width: 1000px) and (orientation: landscape) {
-  .stacks li div:hover::after {
-    font-size: 1.3vw;
-  }
-
-  .stacks-content h3 {
-    font-size: 1vw;
-  }
-}
-
 .person-background {
   height: 100vh;
   width: 50%;
@@ -346,13 +302,10 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-
   height: 100%;
   width: 100%;
-
   opacity: .7;
   z-index: -1;
-
   background:
     linear-gradient(90deg, transparent 30%, var(--color-black)),
     linear-gradient(180deg, transparent 30%, var(--color-black)),
@@ -363,10 +316,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
   padding: calc(1vw + 0.2rem);
   margin: 20px 15px;
-
   border-radius: 50%;
   background:
     radial-gradient(rgba(0, 0, 0, 0.15) 60%, transparent 0),
@@ -387,7 +338,6 @@ body {
 .links a img {
   width: calc(2vw + 0.8rem);
   height: calc(2vw + 0.8rem);
-
   margin: calc(0.8vw + 0.8rem);
   filter: brightness(.8);
   transition: all .3s ease;
@@ -397,33 +347,12 @@ body {
   transform: scale(1.15);
   filter: brightness(1);
 }
-
-@media (max-width: 768px) {
-  .links a img {
-    width: 20px;
-    height: 20px;
-  }
-}
-
-
-@media (max-width: 1440px) and (orientation: landscape) {
-  .profile-photo {
-    width: 45vh;
-  }
-}
-
-@media (min-width: 1440px) {
-  .profile-photo {
-    width: 25vw;
-    max-width: initial;
-  }
-}
-
+/* Final da seção de person */
+/* Início da seção de about */
 #about {
   width: 100%;
   height: auto;
   background: var(--color-black);
-
   display: flex;
   color: var(--color-white);
 }
@@ -431,17 +360,14 @@ body {
 .background-about {
   width: 50%;
   height: 100vh;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .img-wrapper {
   height: 100%;
   width: 100%;
-
   position: relative;
 }
 
@@ -516,7 +442,6 @@ body {
 
 .button-cta {
   display: flex;
-
   max-width: 190px;
   margin: 4rem 3rem;
 }
@@ -542,26 +467,7 @@ body {
   transition: all .3s ease;
   filter: brightness(1);
 }
-
-@media (min-width: 769px) and (max-width: 1440px) {
-  .box-about {
-    padding: 1.8rem;
-  }
-
-  .section-subtitle p {
-    font-size: 2.5rem;
-  }
-
-  .box-about h3 {
-    margin: 2rem 1rem;
-  }
-
-  .box-about h4 {
-    margin: 1.5rem;
-  }
-}
-/* Final da sobre */
-
+/* Final da about */
 /* Início da seção de projetos */
 #projects {
   height: auto;
@@ -587,7 +493,7 @@ body {
 }
 
 .projects-title h2 {
-  font-size: 3rem;
+  font-size: 2.2rem;
   color: var(--color-white);
   text-align: left;
 }
@@ -718,48 +624,6 @@ body {
 .cta-project a:hover {
   opacity: 1;
 }
-
-@media (max-width: 1000px) {
-  .swiper {
-    max-width: 700px;
-  }
-}
-
-@media (min-width: 1840px) {
-  .projects-title h2 {
-    font-size: calc(1.4vw + 1.8rem);
-  }
-
-  .swiper {
-    max-width: calc(30vw + 15rem + 30%);
-    height: calc(19vw + 22.5rem);
-  }
-
-  .image-project {
-    max-width: calc(10vw + 11rem);
-    max-height: calc(10vw + 10rem);
-  }
-
-  .card-project span {
-    font-size: calc(1vw + .25rem);
-    margin: 0.5vw auto 0.5vw;
-  }
-
-  .card-project p {
-    font-size: calc(.7vw + .2rem);
-  }
-
-  .cta-project {
-    width: auto;
-  }
-
-  .cta-project a {
-    padding: 1rem 2rem;
-    font-size: 0.8vw;
-    margin-right: 1vw;
-  }
-}
-
 /* Final da seção de projetos */
 /* Início da seção de contatos */
 #contacts {
@@ -783,7 +647,7 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
-  margin-top: 30px;
+  margin: 30px 0;
 }
 
 .contact-icons-wrapper {
@@ -805,7 +669,7 @@ body {
 }
 
 .contact-content h2 {
-  font-size: 3.5rem;
+  font-size: 2.4rem;
   color: var(--color-black);
   text-align: left;
 }
@@ -864,35 +728,8 @@ body {
   color: #25d366;
 }
 
-
-@media (min-width: 1840px) {
-  .contact-icon-content h2 {
-    font-size: calc(1.4vw + 1.8rem);
-  }
-
-  .contact-icon {
-    width: 3vw;
-    height: 3vw;
-  }
-
-  .contact-icon i {
-    font-size: 1vw;
-  }
-
-  .contact-info span {
-    font-size: 1.1vw;
-  }
-
-  .contact-info p {
-    font-size: .7vw;
-  }
-
-  .contact-info a {
-    font-size: .7vw;
-  }
-}
 /* Final da seção de contatos */
-
+/* Início do footer */
 #footer {
   height: auto;
   width: 100%;
@@ -911,16 +748,7 @@ body {
   flex-direction: column;
   color: var(--color-white);
 }
-
-@media (min-width: 1840px) {
-  .container-footer h2 {
-    font-size: calc(1vw + .2rem);
-  }
-
-  .container-footer h3 {
-    font-size: .8vw;
-  }
-}
+/* Final do footer */
 
 @keyframes written_text {
   100% {
@@ -930,9 +758,9 @@ body {
 
 @keyframes written_text_name {
   100% {
-    font-family: 'Stalinist One', cursive;
-    font-size: 3em;
     color: var(--color-gold);
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }
 
@@ -947,6 +775,44 @@ body {
     left: 100%;
   }
 }
+/* FINAL DO CSS PARA DESKTOP */
+
+/* ============================= */
+/*      (1025px - 1400px) */
+/* ============================= */
+/* ===== HEADER ===== */
+.container-navbar {
+  width: 100%;
+  max-width: 900px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* ===== FINAL DO HEADER ===== */
+/* ===== PERSON ===== */
+.person-wrapper {
+  padding-left: 8%;
+  width: 100%;
+  max-width: 400px;
+}
+/* ===== FINAL DO PERSON ===== */
+/* ===== PROJECTS ===== */
+.projects-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+/* ===== FINAL DO PROJECTS ===== */
+/* ===== CONTACTS ===== */
+.section-container {
+  max-width: 900px;
+}
+/* ===== FINAL DO CONTACTS ===== */
+/* ===== Final do CSS para telas na range 1025px - 1400px ===== */
 
 /* ============================= */
 /* LAPTOP (769px - 1024px) */
@@ -1218,6 +1084,7 @@ body {
 
   .person-wrapper {
     max-width: 100%;
+    padding-left: 0;
   }
 
   .person-name {
@@ -1243,18 +1110,23 @@ body {
     margin: 0;
   }
 
-  .person-content div h1:nth-child(3) {
-    animation: written_text_name .5s ease forwards;
-    animation-delay: 3s;
-    margin-top: 5px;
+  .person-content div h1:nth-child(1) {
+    font-size: 2.4em !important;
   }
 
-  @keyframes written_text_name {
-    100% {
-      font-family: 'Stalinist One', cursive;
-      font-size: 2.2em;
-      color: var(--color-gold);
-    }
+  .person-content div h1:nth-child(2) {
+    font-size: 2.4em !important;
+  }
+
+  .person-content div h1:nth-child(3) {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+    animation: written_text_name .5s ease forwards;
+    animation-delay: 3s;
+    font-family: 'Stalinist One', cursive;
+    font-size: 2.2em;
+    color: var(--color-gold);
+    will-change: transform, opacity;
   }
 
   .person-content div h1:nth-child(4) {
@@ -1344,7 +1216,7 @@ body {
     width: 100%;
     height: auto;
     min-height: 100vh;
-    padding: 20px 24px 40px 24px;
+    padding: 20px 65px 40px 65px;
     margin: 0;
     color: var(--color-white);
     position: relative;
@@ -1452,6 +1324,10 @@ body {
     background-size: cover;
   }
 
+  .projects-container {
+    padding: 0 60px;
+  }
+
   .projects-title {
     position: relative;
     z-index: 3;
@@ -1542,7 +1418,7 @@ body {
 
   /* ===== CONTACT ===== */
   .section-container {
-    padding-bottom: 30px;
+    padding: 0 60px 30px 60px;
   }
 
   .contact-icons-wrapper {
@@ -1874,6 +1750,7 @@ body {
   }
 
   .person-wrapper {
+    padding-left: 0;
     max-width: 100%;
   }
 
@@ -1900,18 +1777,23 @@ body {
     margin: 0;
   }
 
-  .person-content div h1:nth-child(3) {
-    animation: written_text_name .5s ease forwards;
-    animation-delay: 3s;
-    margin-top: 5px;
+  .person-content div h1:nth-child(1) {
+    font-size: 2.2em !important;
   }
 
-  @keyframes written_text_name {
-    100% {
-      font-family: 'Stalinist One', cursive;
-      font-size: 2.2em;
-      color: var(--color-gold);
-    }
+  .person-content div h1:nth-child(2) {
+    font-size: 2.2em !important;
+  }
+
+  .person-content div h1:nth-child(3) {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+    animation: written_text_name .5s ease forwards;
+    animation-delay: 3s;
+    font-family: 'Stalinist One', cursive;
+    font-size: 2.3em;
+    color: var(--color-gold);
+    will-change: transform, opacity;
   }
 
   .person-content div h1:nth-child(4) {
@@ -1921,11 +1803,12 @@ body {
   }
 
   .person-background {
+    max-width: 768px;
     width: 100%;
-    height: 100vh;
-    min-height: unset;
+    min-height: 90vh;
+    height: auto;
     margin: 0;
-    padding: 0;
+    padding: 40px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1941,7 +1824,7 @@ body {
     justify-content: center;
     align-items: center;
     transform: none;
-    margin-top: -30px;
+    margin-top: 20px;
   }
 
   .profile-photo {
@@ -2001,7 +1884,7 @@ body {
     width: 100%;
     height: auto;
     min-height: 100vh;
-    padding: 20px 24px 40px 24px;
+    padding: 20px 25px 40px 25px;
     margin: 0;
     color: var(--color-white);
     position: relative;
@@ -2109,6 +1992,10 @@ body {
     background-size: cover;
   }
 
+  .projects-container {
+    padding: 0 25px;
+  }
+
   .projects-title {
     position: relative;
     z-index: 3;
@@ -2116,7 +2003,7 @@ body {
   }
 
   .projects-title h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     text-align: left;
     margin: 0;
     padding-top: 10px;
@@ -2181,12 +2068,13 @@ body {
   }
 
   .image-project {
-    width: 100%;
-    height: 180px;
+    width: 75%;
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    margin: 60px auto 0 auto;
+    padding-top: 10px;
   }
 
   .image-project img {
@@ -2197,7 +2085,7 @@ body {
 
   /* ===== CONTACT ===== */
   .section-container {
-    padding-bottom: 30px;
+    padding: 0 25px 30px 25px;
   }
 
   .contact-icons-wrapper {
@@ -2222,7 +2110,7 @@ body {
   }
 
   .contact-content h2 {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
   }
 
   .contact-icon {
@@ -2531,6 +2419,7 @@ body {
 
   .person-wrapper {
     max-width: 100%;
+    padding: 0 !important;
   }
 
   .person-name {
@@ -2556,30 +2445,35 @@ body {
     margin: 0;
   }
 
-  .person-content div h1:nth-child(3) {
-    animation: written_text_name .5s ease forwards;
-    animation-delay: 3s;
-    margin-top: 5px;
+  .person-content div h1:nth-child(1) {
+    font-size: 2.2em !important;
   }
 
-  @keyframes written_text_name {
-    100% {
-      font-family: 'Stalinist One', cursive;
-      font-size: 2.2em;
-      color: var(--color-gold);
-    }
+  .person-content div h1:nth-child(2) {
+    font-size: 2.2em !important;
+  }
+
+  .person-content div h1:nth-child(3) {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+    animation: written_text_name .5s ease forwards;
+    animation-delay: 3s;
+    font-family: 'Stalinist One', cursive;
+    font-size: 2.3em;
+    color: var(--color-gold);
+    will-change: transform, opacity;
   }
 
   .person-content div h1:nth-child(4) {
     animation-delay: 4s;
-    font-size: 2rem;
+    font-size: 2.1rem;
     margin-top: 4px;
   }
 
   .person-background {
     width: 100%;
-    height: 100vh;
-    min-height: unset;
+    min-height: 70vh;
+    height: auto;
     margin: 0;
     padding: 0;
     display: flex;
@@ -2837,12 +2731,12 @@ body {
   }
 
   .image-project {
-    width: 100%;
-    height: 180px;
+    width: 85%;
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    margin: 20px auto 20px;
   }
 
   .image-project img {
