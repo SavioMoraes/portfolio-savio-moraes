@@ -26,6 +26,7 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+/* ============ HEADER =============== */
 #header {
   display: flex;
   justify-content: center;
@@ -117,6 +118,7 @@ body {
 .menu-hamburguer {
   display: none;
 }
+/* Final do header */
 
 /* ============================= */
 /* CONTAINER MAIN */
@@ -128,6 +130,10 @@ body {
   padding-top: 70px;
 }
 
+
+/* ============================= */
+        /* PERSON SECTION */
+/* ============================= */
 #person {
   height: 100vh;
   width: 100%;
@@ -341,7 +347,8 @@ body {
   transform: scale(1.15);
   filter: brightness(1);
 }
-
+/* Final da seção de person */
+/* Início da seção de about */
 #about {
   width: 100%;
   height: auto;
@@ -460,8 +467,7 @@ body {
   transition: all .3s ease;
   filter: brightness(1);
 }
-
-/* Final da sobre */
+/* Final da about */
 /* Início da seção de projetos */
 #projects {
   height: auto;
@@ -618,7 +624,6 @@ body {
 .cta-project a:hover {
   opacity: 1;
 }
-
 /* Final da seção de projetos */
 /* Início da seção de contatos */
 #contacts {
@@ -724,7 +729,7 @@ body {
 }
 
 /* Final da seção de contatos */
-
+/* Início do footer */
 #footer {
   height: auto;
   width: 100%;
@@ -743,6 +748,7 @@ body {
   flex-direction: column;
   color: var(--color-white);
 }
+/* Final do footer */
 
 @keyframes written_text {
   100% {
@@ -769,6 +775,44 @@ body {
     left: 100%;
   }
 }
+/* FINAL DO CSS PARA DESKTOP */
+
+/* ============================= */
+/*      (1025px - 1400px) */
+/* ============================= */
+/* ===== HEADER ===== */
+.container-navbar {
+  width: 100%;
+  max-width: 900px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* ===== FINAL DO HEADER ===== */
+/* ===== PERSON ===== */
+.person-wrapper {
+  padding-left: 8%;
+  width: 100%;
+  max-width: 400px;
+}
+/* ===== FINAL DO PERSON ===== */
+/* ===== PROJECTS ===== */
+.projects-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+/* ===== FINAL DO PROJECTS ===== */
+/* ===== CONTACTS ===== */
+.section-container {
+  max-width: 900px;
+}
+/* ===== FINAL DO CONTACTS ===== */
+/* ===== Final do CSS para telas na range 1025px - 1400px ===== */
 
 /* ============================= */
 /* LAPTOP (769px - 1024px) */
