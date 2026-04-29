@@ -1803,9 +1803,9 @@ body {
   }
 
   .person-background {
+    max-width: 768px;
     width: 100%;
-    /* min-height: 60vh; */
-    min-height: clamp(400px, 70vh, 700px);
+    min-height: 90vh;
     height: auto;
     margin: 0;
     padding: 40px 0;
@@ -2419,6 +2419,7 @@ body {
 
   .person-wrapper {
     max-width: 100%;
+    padding: 0 !important;
   }
 
   .person-name {
@@ -2444,30 +2445,35 @@ body {
     margin: 0;
   }
 
-  .person-content div h1:nth-child(3) {
-    animation: written_text_name .5s ease forwards;
-    animation-delay: 3s;
-    margin-top: 5px;
+  .person-content div h1:nth-child(1) {
+    font-size: 2.2em !important;
   }
 
-  @keyframes written_text_name {
-    100% {
-      font-family: 'Stalinist One', cursive;
-      font-size: 2.2em;
-      color: var(--color-gold);
-    }
+  .person-content div h1:nth-child(2) {
+    font-size: 2.2em !important;
+  }
+
+  .person-content div h1:nth-child(3) {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+    animation: written_text_name .5s ease forwards;
+    animation-delay: 3s;
+    font-family: 'Stalinist One', cursive;
+    font-size: 2.3em;
+    color: var(--color-gold);
+    will-change: transform, opacity;
   }
 
   .person-content div h1:nth-child(4) {
     animation-delay: 4s;
-    font-size: 2rem;
+    font-size: 2.1rem;
     margin-top: 4px;
   }
 
   .person-background {
     width: 100%;
-    height: 100vh;
-    min-height: unset;
+    min-height: 70vh;
+    height: auto;
     margin: 0;
     padding: 0;
     display: flex;
@@ -2725,12 +2731,12 @@ body {
   }
 
   .image-project {
-    width: 100%;
-    height: 180px;
+    width: 85%;
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    margin: 20px auto 20px;
   }
 
   .image-project img {
