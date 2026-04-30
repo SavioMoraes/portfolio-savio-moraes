@@ -2408,7 +2408,7 @@ body {
     flex-direction: column;
     height: auto;
     margin: 0;
-    padding: 0;
+    padding: 0 !important;
   }
 
   .person-content {
@@ -2429,7 +2429,7 @@ body {
     width: 100%;
     max-width: 320px;
     margin: 0 auto;
-    padding: 0 auto 20px auto;
+    padding: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2525,7 +2525,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 12px 0;
+    padding: 0;
     gap: 12px;
     width: 100%;
   }
