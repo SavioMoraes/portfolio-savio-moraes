@@ -2154,7 +2154,7 @@ body {
 /* MOBILE PADRÃO (375px - 480px) */
 /* ============================= */
 
-@media (max-width: 480px) {
+@media (min-width: 375px) and (max-width: 480px) {
   /* ===== HEADER ===== */
   #header {
     display: flex;
@@ -2449,11 +2449,11 @@ body {
   }
 
   .person-content div h1:nth-child(1) {
-    font-size: 2.2em !important;
+    font-size: 1.9em !important;
   }
 
   .person-content div h1:nth-child(2) {
-    font-size: 2.2em !important;
+    font-size: 1.9em !important;
   }
 
   .person-content div h1:nth-child(3) {
@@ -2462,14 +2462,14 @@ body {
     animation: written_text_name .5s ease forwards;
     animation-delay: 3s;
     font-family: 'Stalinist One', cursive;
-    font-size: 2.3em;
+    font-size: 2em;
     color: var(--color-gold);
     will-change: transform, opacity;
   }
 
   .person-content div h1:nth-child(4) {
     animation-delay: 4s;
-    font-size: 2.1rem;
+    font-size: 1.8rem;
     margin-top: 4px;
   }
 
@@ -2811,4 +2811,8 @@ body {
   .container-footer h3 {
     font-size: 1.2rem;
   }
+}
+
+@media (max-width: 374px) {
+  /* Xablau */
 }
