@@ -1137,8 +1137,8 @@ body {
 
   .person-background {
     width: 100%;
-    height: 100vh;
-    min-height: unset;
+    min-height: 100vh;
+    height: auto;
     margin: 0;
     padding: 0;
     display: flex;
@@ -1161,7 +1161,7 @@ body {
 
   .profile-photo {
     width: 100%;
-    max-width: 220px;
+    max-width: 180px;
     height: auto;
     border-radius: 50%;
   }
@@ -1169,7 +1169,7 @@ body {
   .links a img {
     width: 30px;
     height: 30px;
-    margin-top: 130px;
+    margin-top: 20px;
   }
 
   /* ===== STACKS ===== */
