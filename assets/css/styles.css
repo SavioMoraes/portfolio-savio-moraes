@@ -188,7 +188,7 @@ body {
   animation: written_text_name .5s ease forwards;
   animation-delay: 3s;
   font-family: 'Stalinist One', cursive;
-  font-size: 3em;
+  font-size: 2.9em;
   color: var(--color-gold);
   will-change: transform, opacity;
 }
@@ -3469,5 +3469,68 @@ body {
 
   .container-footer h3 {
     font-size: 1.2rem;
+  }
+}
+
+/* Modo Paisagem e altura menor que 500px */
+/* @media (max-height: 500px) and (orientation: landscape) {
+
+  #person {
+    height: auto !important;
+    padding: 20px 10px;
+  }
+
+  .person-content {
+    height: auto;
+    justify-content: flex-start;
+  }
+
+  .person-name {
+    max-width: 100%;
+    padding: 10px;
+    gap: 4px;
+  }
+
+  .person-content div h1 {
+    font-size: 1.6rem !important;
+    line-height: 1.2 !important;
+    margin: 0;
+  }
+
+  .person-content div h1:nth-child(1),
+  .person-content div h1:nth-child(2) {
+    font-size: 1.8rem !important;
+  }
+
+  .person-content div h1:nth-child(3) {
+    font-size: 1.9rem !important;
+  }
+
+  .person-content div h1:nth-child(4) {
+    font-size: 1.6rem !important;
+  }
+} */
+
+/* LANDSCAPE - MENU OVERLAY CORRIGIDO */
+@media (orientation: landscape) and (max-height: 500px) {
+  .navbar-links {
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 15px;
+  }
+
+  .navbar-links li {
+    width: auto;
+    opacity: 1; 
+    transform: none;
+  }
+
+  .navbar-links li a {
+    padding: 8px 12px;
+    font-size: 1.4rem;
+    justify-content: center;
   }
 }
